@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --var: #;
+    --var: #;
+    --var: #;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    display: block;
+}
+
+
+
+
+.container {
+    max-width: 1000px;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+
+
+
+
+.productContainer,
+.userContainer {
+    width: 300px;
+    box-shadow: 2px 5px 15px 0px rgba(0,0,0,0.20);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;    
+}
+/* .productImg {
+    margin-bottom: 14px;
+} */
+.productTitle {
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 14px 0;
+    font-size: 22px;
+}
+.productDesc {
+    text-align: center;
+    max-width: 80%;
+    margin: 14px auto;
+    font-size: 16px;
+}
+.productPrice {
+    text-align: center;
+    margin: 14px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.productRating {
+    text-align: center;
+    margin: 14px 0;
+}
+.productButton {
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background-color: #c2cae8;
+    font-size: 14px;
+    transition: 400ms;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.productButton:hover {
+    background-color: #b3bad5;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+.userHeaderContainer {
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    height: 100px;
+    overflow: visible;
+    background: linear-gradient(135deg, rgba(100,0,255,1) 0%, rgba(108,76,138,1) 100%);
+}
+.userImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: absolute;
+    background: linear-gradient(135deg, rgba(100,0,255,1) 0%, rgba(108,76,138,1) 100%);
+    left: 50%;
+    top: 100%;
+    translate: -50% -50%;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.20);
+}
+.userName {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+}
+.userInfo {
+    margin: 14px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
