@@ -1,15 +1,15 @@
-const app = document.getElementById('container')
+// const app = document.getElementById('container')
 
-fetch('https://dummyjson.com/products')
-    .then((res) => res.json())
-    .then((res) => {
-        console.log(res)
-    });
-fetch('https://dummyjson.com/users')
-    .then((res) => res.json())
-    .then((res) => {
-        console.log(res)
-    });
+// fetch('https://dummyjson.com/products')
+//     .then((res) => res.json())
+//     .then((res) => {
+//         console.log(res)
+//     });
+// fetch('https://dummyjson.com/users')
+//     .then((res) => res.json())
+//     .then((res) => {
+//         console.log(res)
+//     });
 
 
 
