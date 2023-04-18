@@ -31,7 +31,34 @@ getProducts().then((data) => {
 })
 
 
-function addToCart (id, title) {
-    let cart = { id: id, title: title}
+function addToCart(id, title) {
+    let cart = { id: id, title: title }
     localStorage.setItem('cart', JSON.stringify(cart))
 }
+
+
+function createCart() {
+    const shoppingCart = JSON.parse(localStorage.getItem('myCart')) || { cartItems: [] }
+
+    function saveCart() {
+        localStorage.setItem('myCart', JSON.stringify(shoppingCart))
+    };
+
+    return {
+        getCartItems: function () {
+            return cart.cartItems
+        },
+
+        increaseCartQuantity: function (id, price, title) {
+             let existingItem = cart.cartItems.find(function(item) {
+                return item.id === id
+             })
+             if (existingItem) {
+                existingItem.amount += 1
+             } else {
+                cart.cartItems.push({id: id, price: price, amount: 1, title: title})
+             }
+        },
+    }
+
+};
