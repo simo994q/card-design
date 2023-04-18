@@ -18,7 +18,7 @@ function addProductToDom(product) {
     <p class="productDesc">${product.description}</p>
     <h2 class="productPrice">$${product.price}</h2>
     <p class="productRating">${product.rating} / 5</p>
-    <button class="productButton">Add to cart</button>
+    <button class="productButton" onclick="addToCart(${product.id}, '${product.title}')">Add to cart</button>
     `
     containerElement.appendChild(productElement)
 };
@@ -29,3 +29,9 @@ getProducts().then((data) => {
         addProductToDom(product)
     })
 })
+
+
+function addToCart (id, title) {
+    let cart = { id: id, title: title}
+    localStorage.setItem('cart', JSON.stringify(cart))
+}
