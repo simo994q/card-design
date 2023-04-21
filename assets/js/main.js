@@ -5,7 +5,7 @@ function getProducts() {
         .catch((error) => console.error(error));
 };
 
-const containerElement = document.getElementById('container')
+const containerElement = document.getElementById('productContainer')
 
 function addProductToDom(product) {
     const productElement = document.createElement('div')
@@ -96,3 +96,13 @@ function createCart() {
 const shoppingcart = createCart()
 
 // console.log("cart items:", shoppingcart.getCartItems());
+
+
+
+const shoppingCartContainer = document.getElementById('cartContainer')
+const shoppingCartButton = document.getElementById('cartButton')
+
+function openShoppingCart () {
+
+
+};

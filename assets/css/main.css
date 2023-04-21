@@ -27,14 +27,27 @@ a {
 
 
 
+
+#cartButton {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+
 #container {
     max-width: 1000px;
     margin: auto;
+    position: relative;
+}
+
+#productContainer {
+    width: 100%;
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
 .container1 {
     max-width: 1000px;
     margin: auto;
@@ -47,14 +60,15 @@ a {
 
 .productContainer,
 .userContainer {
-    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     overflow: hidden;
-    background-color: #ffffff;    
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
+
 /* .productImg {
     margin-bottom: 14px;
 } */
@@ -64,22 +78,26 @@ a {
     margin: 14px 0;
     font-size: 22px;
 }
+
 .productDesc {
     text-align: center;
     max-width: 80%;
     margin: 14px auto;
     font-size: 16px;
 }
+
 .productPrice {
     text-align: center;
     margin: 14px 0;
     font-size: 20px;
     font-weight: 500;
 }
+
 .productRating {
     text-align: center;
     margin: 14px 0;
 }
+
 .productButton {
     width: 100%;
     height: 50px;
@@ -92,6 +110,7 @@ a {
     cursor: pointer;
     letter-spacing: 1px;
 }
+
 .productButton:hover {
     background-color: #b3bad5;
     font-size: 15px;
@@ -109,25 +128,28 @@ a {
     margin-bottom: 60px;
     height: 100px;
     overflow: visible;
-    background: linear-gradient(135deg, rgba(100,0,255,1) 0%, rgba(108,76,138,1) 100%);
+    background: linear-gradient(135deg, rgba(100, 0, 255, 1) 0%, rgba(108, 76, 138, 1) 100%);
 }
+
 .userImage {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     border: 3px solid #fff;
     position: absolute;
-    background: linear-gradient(135deg, rgba(100,0,255,1) 0%, rgba(108,76,138,1) 100%);
+    background: linear-gradient(135deg, rgba(100, 0, 255, 1) 0%, rgba(108, 76, 138, 1) 100%);
     left: 50%;
     top: 100%;
     translate: -50% -50%;
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.20);
 }
+
 .userName {
     text-align: center;
     font-weight: 600;
     margin: 10px;
 }
+
 .userInfo {
     margin: 14px auto;
     width: 80%;
