@@ -20,6 +20,7 @@ function addProductToDom(product) {
     <p class="productRating">${product.rating} / 5</p>
     <button class="productButton" onclick="shoppingcart.increaseCartQuantity(${product.id}, ${product.price}, '${product.title}')">Add to cart</button>
     <button class="productButton" onclick="shoppingcart.setDeleteItem(${product.id})">Remove</button>
+    <button class="productButton" onclick="shoppingcart.decreaseCartQuantity(${product.id})">Remove one</button>
     `
     containerElement.appendChild(productElement)
 };
@@ -58,18 +59,38 @@ function createCart() {
         },
 
         increaseCartQuantity: function (id, price, title) {
-             let existingItem = cart.cartItems.find(function(item) {
+            let existingItem = cart.cartItems.find(function (item) {
                 return item.id === id
-             })
-             if (existingItem) {
+            })
+            if (existingItem) {
                 existingItem.amount += 1
-             } else {
-                cart.cartItems.push({id: id, price: price, amount: 1, title: title})
-             }
-             saveCart()
+            } else {
+                cart.cartItems.push({ id: id, price: price, amount: 1, title: title })
+            }
+            saveCart()
         },
+
+        decreaseCartQuantity: function (id) {
+            let existingItem = cart.cartItems.find(function (item) {
+                return item.id === id
+            })
+            if (existingItem) {
+                if (existingItem.amount === 1) {
+                    cart.cartItems = cart.cartItems.filter(function (item) {
+                        return item.id !== id
+                    })
+                }
+                else {
+                    existingItem.amount -= 1
+                }
+                saveCart()
+
+            }
+        }
     }
 
 };
 
 const shoppingcart = createCart()
+
+console.log("cart items:", shoppingcart.getCartItems());
