@@ -18,9 +18,11 @@ function addProductToDom(product) {
     <p class="productDesc">${product.description}</p>
     <h2 class="productPrice">$${product.price}</h2>
     <p class="productRating">${product.rating} / 5</p>
+    <div>
     <button class="productButton" onclick="shoppingcart.increaseCartQuantity(${product.id}, ${product.price}, '${product.title}')">Add to cart</button>
     <button class="productButton" onclick="shoppingcart.setDeleteItem(${product.id})">Remove</button>
     <button class="productButton" onclick="shoppingcart.decreaseCartQuantity(${product.id})">Remove one</button>
+    </div>
     `
     containerElement.appendChild(productElement)
 };
@@ -93,4 +95,4 @@ function createCart() {
 
 const shoppingcart = createCart()
 
-console.log("cart items:", shoppingcart.getCartItems());
+// console.log("cart items:", shoppingcart.getCartItems());
